@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* pc해상도일 때 적용되는 서식 */
+@media screen and (min-width:1025px) {
+  header{
+    width:100%;height:170px;
+  }
+  .h_top{
+    width:1200px;
+    margin:0 auto;
+    position:relative;
+  }
+  .h_top h1{
+    width:200px;
+    /* position:relative;top:40px;
+    padding-top:40px; */
+    transform:translateY(40px);
+  }
+  .h_top h1 img{width:100%;}
+  .lnb{position:absolute;right:0px;top:30px;}
+  .lnb > ul{
+    display:flex;
+  }
+  .lnb li {margin:0px 10px;}
+  .lnb > ul a{
+    color:#fff;
+    font-size:13px;
+  }
+  .lnb > ul a:hover{
+    text-decoration:underline;
+  }
+  /* 검색폼 서식 */
+  header fieldset{
+    position:absolute;
+    right:-15px;top:60px;
+  }
+  #search{
+    width:230px;height:30px;
+    border-radius: 26px;
+    text-align:center;
+    border:none;
+  }
+  label.fa-search{
+    font-size:22px;
+    transform:translate(-36px, 4px);
+  }
+
+  /* 메인내비게이션 서식 */
+  .h_bottom{
+    width:100%;height:48px;
+    overflow:hidden;
+    background:rgba(255, 255, 255, 0.95);
+    position:absolute;top:122px;
+    transition:0.5s;
+  }
+  .h_bottom:hover{
+    height:420px;
+  }
+  .gnb{
+    background:#4B4B4B;
+    height:48px;
+  }
+  .gnb > ul{
+    width:1200px;
+    margin:0px auto;
+    display:flex;
+    justify-content: flex-end;
+  }
+  .gnb > ul > li{
+    line-height:48px;
+    text-align:center;
+    position:relative;/* 서브메뉴의 기준 */
+    padding:0px 40px;
+  }
+  .gnb > ul > li > a{
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    text-transform: uppercase;
+  }
+  .gnb > ul > li > a:hover{
+    text-decoration:underline;
+  }
+  .gnb > ul > li > a::after{
+    width:1px;height:10px;
+    background:#ccc;
+    content:"";
+    display:block;
+    position:relative;top:-28px;
+  }
+  .gnb > ul > li:first-child > a:after{left:80px;}
+  .gnb > ul > li:nth-child(2) > a:after{left:97px;}
+  .gnb > ul > li:nth-child(3) > a:after{left:64px;}
+  .gnb > ul > li:nth-child(4) > a:after{left:60px;}
+  .gnb > ul > li:nth-child(5) > a:after{left:84px;}
+  .gnb > ul > li:nth-child(6) > a:after{left:120px;}
+  .gnb > ul > li:last-child > a:after{display:none;}
+
+  /* 서브메뉴 */
+  .sub{position:absolute;left:0px;width:100%;}
+  .sub a{font-size:14px;}
+  .sub a:hover{text-decoration:underline;}
+}

@@ -1,0 +1,311 @@
+@charset "utf-8";
+/*mobile.css서식*/
+@media screen and (max-width:767px) 
+{
+  header{
+    height: 60px;
+    position: relative;/*기준*/
+  }
+  .h_top{
+    width: 100%;
+    text-align: center;
+  }
+  .h_top h1{
+    transform: none;
+    width: 130px;
+    margin: 0 auto;/*text align 안먹음->width=100%이면 가능 */
+    padding-top: 4px;
+  }
+  i.fa-shopping-cart,label.fa-bars{
+    display: block;/*common파일에 ds:none;함*/
+    position: absolute;/*header 기준의 타겟*/
+    top: 10px;
+    font-size: 1.8rem;/*16px * 1.8 = 28.8,
+    아이콘 : 가로세로44~48이 적당함, 패딩값10px주기*/
+    padding: 10px;
+    color: aliceblue;
+  }
+  label.fa-bars{
+    right: 0px;
+  }
+  .close_btn{
+    display: block;
+    position: fixed;
+    top: 3%;right: 2%;
+    z-index: 1001;
+    color: #fff;
+  }
+
+  /*lnb 서식*/
+  .lnb{
+  width: 100%;
+  position: fixed;
+  left: 100%;
+  top: 480px;
+  z-index: 1001;
+  transition: 0.5s;
+}
+.lnb>ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.lnb>ul>li{
+  width: 45%;  
+  display:inline-block;
+  margin: 0px 3px 3px 0px;
+  text-align: center;
+  background: #818181;
+}
+.lnb>ul>li>a{
+  line-height: 40px;
+  display: block;
+}
+.gnb>ul{
+  width: 100%;
+}
+  /*검색폼 서식*/
+header fieldset{
+  position: fixed;
+  width: 100%;
+  /* left: 21%;*/
+  left: 100%;
+  top: 7%;
+  z-index: 1000;
+  transition: 0.5s;
+  }
+
+  /*모바일 내비게이션 서식*/
+  .h_bottom{
+    width: 100%;
+    height: 100%;
+    background: rgb(58, 54, 54);
+    position: fixed;
+    top: 0px;left: 100%;
+    transition: 0.5s;
+  }
+  .h_bottom:hover{height: 100%;}
+
+  .close_btn{
+    position: absolute;
+    left: 2.3%;top: 2%;
+    z-index: 1001;
+
+  }
+  .close_btn i{
+    color: aliceblue;
+    font-size: 1.8rem;
+    padding: 5px;
+  }
+  /* main,footer{
+    display: none;
+  } */
+  .gnb{
+    width: 100%;
+    padding-top: 100px;
+    background: none;
+  }
+  .gnb>ul{
+    display: block;
+    padding: 0px 1.2%s;
+  }
+  .gnb>ul>li{
+    border-bottom: 1px solid #b4abab;
+    text-indent: 20px;
+    text-align: left;
+    padding: 0px;
+  }
+  .gnb>ul>li>a::after{
+    display: none;
+  }
+  .sub{display: none;}
+  /*메인서식*/
+  main{}
+  main .m_slide img{
+    height: 630px;
+  }
+
+  /*무료체험*/
+  .free_ex{padding-top: 160px;}
+  .free_ex>article{
+    width: 100%;
+    height: 400px;
+    padding: 140px 0px 40px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }  
+  .ex_right{padding-bottom: 40px;}  
+  .ex_right>h3{
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .free_ex>article>img{
+    float: none;
+    width:75%;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .ex_right{
+    float: none;
+    width: 100%;
+  } 
+
+
+  /*햄버거 메뉴 클릭시 fieldset,lnb,h_bottom 나오게 하기*/
+  #toggle:checked+header .lnb{left: 0px;}
+  #toggle:checked+header fieldset{left: 0;}
+  #toggle:checked+header>.h_bottom{left: 0px;}
+
+  /*product서식*/
+  .product{
+    width: 100%;/*pc버전에 1200px*/
+    overflow: hidden;/*밖에 나간거 안보이게 하기*/
+  }
+  .product>h2{
+    font-size: 1.5rem;
+  }
+  .product_list{
+    margin-top: 70px;
+    width: 150%;
+  }
+  .product_list li{
+    width: 75%;
+    font-size: 0.8rem;
+  }
+  .product_list img{
+    width: 170px;
+  }
+  .product_list h3{
+    font-size: 1rem;
+  }
+  .product_list p{
+    font-size: 0.75rem;
+  }
+  .price{
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+  /*스토리 서식*/
+  .story{padding-bottom: 120px;}
+  .story>article{
+    width: 100%;
+    text-align: center;
+  }
+  .story_left{
+    padding: 0px;
+    float: none;
+  }
+  .story_left>h2{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 1.8rem;
+  }
+  .story_left>p{
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 30px;
+    padding-bottom: 50px;
+  }
+  .story .s_img{
+    float: none;
+    width: 75%;
+    padding: 30px;
+  }
+  /*인스타갤러리서식*/
+  .gallery_wrap{
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .gallery_wrap>h2{
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  /*갤러리 그리드 레이아웃*/
+  .gallery{
+    width: 100%;
+    grid-template-columns: repeat(2,auto);
+  }
+  .gallery li:nth-child(7), .gallery li:nth-last-child(8), .gallery li:nth-last-child(9),.gallery li:nth-last-child(10),.gallery li:nth-last-child(11),.gallery li:last-child{display: none;}
+
+  .gallery>li{
+    overflow: hidden;
+    height: 130px;
+  }
+
+  /*푸터서식*/
+  
+  .f_nav,.f_bottom, address{
+    width: 100%;
+  }
+  .f_nav{
+    font-size: .7rem;
+    padding: 0px 0.5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+  }
+  .f_nav>ul{
+    display: flex;
+    justify-content: space-around;
+    order: 2;
+  }
+  .f_nav li{width: 100px;}
+  .f_nav>dl{
+    order: 1;
+    width: 100%;
+    justify-content: space-around;
+    height: 60px;}
+  .f_nav>dl>dt{width: 50px;}
+  .f_nav>dl>dd{
+  padding-left: 10px;}
+  .f_nav dl span{
+    padding-left: 10px;
+}
+  .f_bottom{
+    width: 100%;
+    display: block;
+    position: relative;/*기준*/
+    padding-top: 160px;
+  }
+  .f_bottom dl{
+    float: left;
+    line-height: 210%;
+    padding-left: 3%;
+  }
+  .f_bottom dt{
+    font-size: 0.8rem;
+  }
+  .f_bottom dd{
+    font-size: 0.7rem;
+  }
+  dd.tel{
+    font-size: 1.5rem;
+  }
+  .f_bottom select{
+    position: absolute;
+    top: 56px; left: 50%;
+    transform: translateX(-50%);/*중요공식*/
+  }
+  .sns{
+    position: absolute;
+    top: 84px;left: 50%;
+    transform: translateX(-50%);
+  }
+  address{
+  width: 100%;
+  margin-top: 100px;
+  padding: 10px 2%;
+  box-sizing: border-box;}
+
+  .a_info, .a_pay{
+    width: 100%;
+  }
+}

@@ -1,0 +1,151 @@
+@charset "utf-8";
+/*tablet.css서식*/
+/*pc와 비교하면서 필요한 부분만 바꾸기*/
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+  header{height: 160px;}/*170px->160px줄이기*/
+  .h_top{
+  width: 100%;/*pc에서는 밖으로 나갔지만 쓰면 들어옴*/
+  }
+  .h_top h1{
+    transform: translate(10px,30px);
+  }
+  .gnb > ul{
+  width: 100%;/*글자가 안보임*/
+  justify-content: start;
+
+  }
+  .gnb > ul > li{
+  padding: 0 2.3%;/*최소크기 768px 기준*/
+  }
+
+  .gnb > ul > li:first-child > a:after{left:60px;}
+  .gnb > ul > li:nth-child(2) > a:after{left:80px;}
+  .gnb > ul > li:nth-child(3) > a:after{left:80px;}
+  .gnb > ul > li:nth-child(4) > a:after{left:75px;}
+  .gnb > ul > li:nth-child(5) > a:after{left:75px;}
+  .gnb > ul > li:nth-child(6) > a:after{left:100px;}
+  .gnb > ul > li:last-child > a:after{display:none;}
+
+  label.fa-bars{
+    display: block;
+    font-size: 36px;
+    color: aliceblue;
+    position: absolute; right: 3%;
+    top: 123px;
+    z-index: 100;
+  }
+  .h_bottom{transition: none;}
+  /*햄버거 아이콘 터치하면 .h_bottom의 높이를 조절하도록 서브메뉴가 보이도록하고 다시 햄버거 메뉴 클릭시 높이값을 숨겨지도록 한다.*/
+  
+  /*토글을 체크하면(네모칸)(=lable의 햄버거체크) 헤더를 선택하고 그 자손도 선택해서 그 자손의 높이를 조절한다.*/
+  #toggle:checked+header.h_bottom{
+    height: 430px;
+  }
+
+  /*메인슬라이드서식*/
+  main .m_slide img{
+    height: 600px;
+  }
+  /*무료체험 서식*/
+  .free_ex>article{
+    width: 100%;
+    height: 400px;
+  }
+  .free_ex > article > img{
+    width: 300px;
+    padding: 60px 60px 0px 3%;
+  } 
+  .ex_right{
+    width: 400px;
+  } 
+  .ex_right>h3{
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  .p01{padding: 20px 0px 50px 0px;}
+
+  /*하림펫 쇼핑하러 가기*/
+  .product{width: 100%;}
+  .product>h2{
+    font-size: 1.5rem;
+  }
+  .product_list{
+    margin-top: 70px;
+  }
+  .product_list img{
+    width: 250px;
+  }
+  /*하림펫스토리*/
+  .story>article{width: 100%;}
+  .story_left>h2{font-size: 1.5rem;/*상속*/
+  padding-top: 80px;
+  padding-bottom: 40px;}
+
+.story .s_img{
+  width: 340px;
+  padding: 70px 60px 0px 0px;
+}
+/*갤러리 그리드 레이아웃*/
+.gallery_wrap{
+  width: 100%;
+  padding: 25px 0px;
+}
+.gallery_wrap>h2{
+  text-align: center;
+  font-size: 1.6rem;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.gallery{
+  width: 100%;
+  grid-template-columns: repeat(3,auto);
+}
+.gallery li:nth-child(10), .gallery li:nth-last-child(11), .gallery li:last-child{display: none;}
+}
+
+.gallery>li{
+  overflow: hidden;
+  height: 150px;
+}
+
+/*푸터서식*/
+.f_nav,.f_bottom, address{
+  width: 100%;
+}
+.f_nav{
+  font-size: 0.7rem;
+  padding: 0px 0.5px;
+  box-sizing: border-box;
+}
+.f_nav>ul{
+  display: flex;
+  justify-content: space-around;
+}
+.f_nav li{width: 100px;}
+.f_bottom{
+  display: block;
+  position: relative;/*기준*/
+  box-sizing: border-box;
+  padding: 0 0.8%;}
+.f_bottom dl{float: left; margin: 10px;}
+.f_bottom dt{font-size: 1.2rem;}
+.f_bottom dd{font-size: 1em;}
+dd.tel{
+  font-size: 2rem;
+}
+.f_bottom select{
+  position: absolute;
+  top: 10px; right: 10px;
+}
+.sns{
+  position: absolute;
+  top: 60px; right: 10px;
+}
+address{
+margin-top: 130px;
+padding: 10px 2%;
+box-sizing: border-box;}

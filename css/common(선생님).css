@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* 공통서식 common.css */
+
+header{
+  background:#4B4B4B;
+}
+/* 장바구니, 전체메뉴 아이콘 숨기기 */
+i.fa-shopping-cart, label.fa-bars, fieldset label span, #toggle, legend, i.fa-angle-down{
+  display:none;
+}
+
+
+
+footer {
+  background: #464545;
+}
+
